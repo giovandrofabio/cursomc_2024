@@ -1,11 +1,13 @@
 package com.nelioalves.cursomc.dto;
 
+import com.nelioalves.cursomc.services.validation.ClienteInsert;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Length;
 
 import java.io.Serializable;
 
+@ClienteInsert
 public class ClienteNewDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
