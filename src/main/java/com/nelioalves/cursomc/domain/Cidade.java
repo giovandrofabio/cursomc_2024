@@ -1,7 +1,7 @@
 package com.nelioalves.cursomc.domain;
 
-import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
