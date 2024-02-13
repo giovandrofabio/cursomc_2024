@@ -2,6 +2,7 @@ package com.nelioalves.cursomc.services;
 
 import com.nelioalves.cursomc.domain.*;
 import com.nelioalves.cursomc.domain.enums.EstadoPagamento;
+import com.nelioalves.cursomc.domain.enums.Perfil;
 import com.nelioalves.cursomc.domain.enums.TipoCliente;
 import com.nelioalves.cursomc.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -191,7 +192,7 @@ public class DBService {
 
         Cliente cli2 = new Cliente(null, "Ana Costa", "nelio.iftm@gmail.com", "31628382740", TipoCliente.PESSOAFISICA, pe.encode("123"));
         cli2.getTelefones().addAll(Arrays.asList("93883321", "34252625"));
-//        cli2.addPerfil(Perfil.ADMIN);
+        cli2.addPerfil(Perfil.ADMIN);
 
         Endereco e1 = new Endereco(null, "Rua Flores", "300", "Apto 303", "Jardim", "38220834", cli1, c1);
         Endereco e2 = new Endereco(null, "Avenida Matos", "105", "Sala 800", "Centro", "38777012", cli1, c2);
