@@ -3,6 +3,7 @@ package com.nelioalves.cursomc.config;
 import com.nelioalves.cursomc.services.DBService;
 import com.nelioalves.cursomc.services.EmailService;
 import com.nelioalves.cursomc.services.MockEmailService;
+import com.nelioalves.cursomc.services.SmtpEmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -34,6 +35,6 @@ public class DevConfig {
 
     @Bean
     public EmailService emailService() {
-        return new MockEmailService();
+        return new SmtpEmailService();
     }
 }
